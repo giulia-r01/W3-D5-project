@@ -481,16 +481,26 @@ makeBgRed()
   Scrivi una funzione per aggiungere un nuovo elemento alla lista non ordinata con id "myList".
 */
 
-const createNewLi = function () {
-  const unOrderedList = document.getElementById("myList")
-  unOrderedList.innerHTML = `<li>element</li>`
+const addNewLi = function () {
+  const list = document.getElementById("myList")
+  const newLi = document.createElement("li")
+  newLi.textContent = "Nuova li"
+
+  list.appendChild(newLi)
 }
 
-createNewLi()
-
+addNewLi()
 /* ESERCIZIO 25
   Scrivi una funzione per svuotare la lista non ordinata con id "myList".
 */
+
+const removeLi = function () {
+  const list = document.getElementById("myList")
+  list.remove()
+}
+
+// Esegui la funzione per svuotare la lista
+removeLi()
 
 /* ESERCIZIO 26
   Scrivi una funzione per aggiungere ad ogni tag <tr> la classe CSS "test"
